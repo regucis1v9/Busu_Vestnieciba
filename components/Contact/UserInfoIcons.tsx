@@ -19,14 +19,14 @@ export function UserInfoIcons() {
 
                 <Group wrap="nowrap" gap={10} mt={3} justify='end'>
                     <Text fz="xs" c="dimmed" ta="right">
-                    regnars.klavins@gmail.com
+                    fake.email@gmail.com
                     </Text>
                     <IconAt stroke={1.5} size="1rem" className={classes.icon} />
                 </Group>
 
                 <Group wrap="nowrap" gap={10} mt={5} justify='end'>
                     <Text fz="xs" c="dimmed" ta="right">
-                    +371 29895705
+                    +371 20000000
                     </Text>
                     <IconPhoneCall stroke={1.5} size="1rem" className={classes.icon} />
                 </Group>
@@ -54,7 +54,7 @@ export function UserInfoIcons() {
                 <Group wrap="nowrap" gap={10} mt={5}>
                     <IconPhoneCall stroke={1.5} size="1rem" className={classes.icon} />
                     <Text fz="xs" c="dimmed">
-                    +371 20327801
+                    +371 20000000
                     </Text>
                 </Group>
                 </div>
