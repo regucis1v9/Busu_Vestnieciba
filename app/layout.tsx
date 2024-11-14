@@ -1,5 +1,6 @@
 import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import React from 'react';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
