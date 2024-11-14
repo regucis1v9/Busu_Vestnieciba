@@ -20,8 +20,12 @@ export function HeaderMenu() {
   const [opened, { toggle }] = useDisclosure(false);
   const { height, width } = useViewportSize();
 
-  // Function to scroll to the corresponding section
+  // Function to scroll to the corresponding section and close the mobile sidebar
   const handleScroll = (sectionId: string) => {
+    // Close the sidebar immediately
+    toggle();
+
+    // Now perform the scrolling
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to section
@@ -31,7 +35,9 @@ export function HeaderMenu() {
   const items = links.map((link) => (
     <Button
       key={link.label}
-      onClick={() => handleScroll(link.link.substring(1))} // Remove '#' and scroll to the section
+      onClick={() => {
+        handleScroll(link.link.substring(1)); // First function call: scroll to the section
+      }}
       className={classes.link}
       color='orange'
       variant='subtle'
@@ -79,10 +85,10 @@ export function HeaderMenu() {
             style={{ ...transitionStyle, zIndex: 10 }}
           >
             <Stack h={height} gap={20} align='center'>
-                <Text w={width*0.9} ta="left">Logo</Text>
-                {items}
-                <LanguageSelect />
-                <ActionToggle />
+              <Text w={width * 0.9} ta="left">Logo</Text>
+              {items}
+              <LanguageSelect />
+              <ActionToggle />
             </Stack>
           </Paper>
         )}
