@@ -2,8 +2,8 @@
     height: rem(56px);
     margin-bottom: rem(120px);
     background-color: transparent;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border: none;
   }
   
@@ -20,13 +20,13 @@
     padding: rem(8px) rem(12px);
     border-radius: var(--mantine-radius-sm);
     text-decoration: none;
-    color: light-dark(var(--mantine-color-green-4), var(--mantine-color-green-5));
+    color: light-dark(var(--mantine-color-orange-4), var(--mantine-color-orange-5));
     font-size: var(--mantine-font-size-sm);
     font-weight: 500;
     transition: background-color 0.2s ease;
   
     @mixin hover {
-      background-color: light-dark(var(--mantine-color-green-4), var(--mantine-color-green-5));
+      background-color: light-dark(var(--mantine-color-orange-4), var(--mantine-color-orange-5));
       color: white;
     }
   }

@@ -25,7 +25,7 @@
   }
   .link:hover{
     @mixin hover {
-      background-color: light-dark(var(--mantine-color-green-4), var(--mantine-color-green-5));
+      background-color: light-dark(var(--mantine-color-orange-4), var(--mantine-color-orange-5));
       color: white;
     }
   }

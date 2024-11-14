@@ -41,7 +41,7 @@ import {
         <feature.icon
           style={{ width: rem(50), height: rem(50) }}
           stroke={2}
-          color={theme.colors.green[6]}
+          color={theme.colors.orange[6]}
         />
         <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
           {feature.title}
@@ -55,7 +55,7 @@ import {
     return (
       <Container size="lg" py="xl" id='reasons'>
         <Group justify="center">
-          <Badge variant="filled" size="lg" color={theme.colors.green[6]}>
+          <Badge variant="filled" size="lg" color={theme.colors.orange[6]}>
             Labākā pārvadājumu kompānija
           </Badge>
         </Group>

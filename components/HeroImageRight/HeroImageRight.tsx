@@ -20,7 +20,7 @@ export function HeroImageRight() {
                 component="span"
                 inherit
                 variant="gradient"
-                gradient={{ from: 'teal', to: 'green' }}
+                gradient={{ from: 'yellow', to: 'orange' }}
               >
                 Uzticams
               </Text>{' '}
@@ -29,7 +29,7 @@ export function HeroImageRight() {
                 component="span"
                 inherit
                 variant="gradient"
-                gradient={{ from: 'teal', to: 'green' }}
+                gradient={{ from: 'yellow', to: 'orange' }}
               >
                 {' '}pieejams
               </Text>{' '}
@@ -42,7 +42,7 @@ export function HeroImageRight() {
 
             <Button
               variant="gradient"
-              gradient={{ from: 'teal', to: 'green' }}
+              gradient={{ from: 'yellow', to: 'orange' }}
               size="xl"
               className={classes.control}
               mt={40}
