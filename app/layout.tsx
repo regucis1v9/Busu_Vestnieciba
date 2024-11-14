@@ -1,12 +1,13 @@
 import '@mantine/core/styles.css';
+import '@mantine/carousel/styles.css';
 
 import React from 'react';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { theme } from '../theme';
 
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'Busu Vēstniecība',
+  description: 'Visas jūsu kravas pārvadājumu vajadzības vienā vietā',
 };
 
 export default function RootLayout({ children }: { children: any }) {
