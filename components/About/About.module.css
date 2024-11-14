@@ -1,0 +1,14 @@
+.text1, .text2{
+    text-align: right;
+    min-width: 200px;
+}
+.text1{
+    text-align: left;
+}
+.group{
+    justify-content: space-evenly;
+}
+.stack{
+    width: 50%;
+    min-width: 280px;
+}

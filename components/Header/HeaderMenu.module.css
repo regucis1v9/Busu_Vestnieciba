@@ -1,0 +1,36 @@
+.header {
+    height: rem(56px);
+    margin-bottom: rem(120px);
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: none;
+  }
+  
+  .inner {
+    height: rem(56px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .link {
+    display: block;
+    line-height: 1;
+    padding: rem(8px) rem(12px);
+    border-radius: var(--mantine-radius-sm);
+    text-decoration: none;
+    color: light-dark(var(--mantine-color-green-4), var(--mantine-color-green-5));
+    font-size: var(--mantine-font-size-sm);
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  
+    @mixin hover {
+      background-color: light-dark(var(--mantine-color-green-4), var(--mantine-color-green-5));
+      color: white;
+    }
+  }
+  
+  .linkLabel {
+    margin-right: rem(5px);
+  }
