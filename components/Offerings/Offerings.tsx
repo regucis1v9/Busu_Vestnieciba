@@ -51,7 +51,7 @@ interface FeatureProps {
 export function Feature({ icon: Icon, title, description }: FeatureProps) {
   return (
     <div>
-      <ThemeIcon variant="light" color='green' size={40} radius={40}>
+      <ThemeIcon variant="light" color='orange' size={40} radius={40}>
         <Icon style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
       </ThemeIcon>
       <Text mt="sm" mb={7}>

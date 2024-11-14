@@ -10,7 +10,7 @@ interface LinkItem {
 }
 
 const links: LinkItem[] = [
-  { link: '#offerings', label: 'Pieāvājumi' },
+  { link: '#offerings', label: 'Piedāvājumi' },
   { link: '#about', label: 'Par Mums' },
   { link: '#contact', label: 'Sazināties' },
 ];
@@ -31,7 +31,7 @@ export function HeaderMenu() {
       key={link.label}
       onClick={() => handleScroll(link.link.substring(1))} // Remove '#' and scroll to the section
       className={classes.link}
-      color='green'
+      color='orange'
       variant='subtle'
     >
       {link.label}
