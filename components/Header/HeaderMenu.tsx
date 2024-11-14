@@ -3,6 +3,7 @@ import { Group, Container, Text, AppShellHeader, Button, Burger } from '@mantine
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderMenu.module.css';
 import { ActionToggle } from '../ThemeToggle/ActionToggle';
+import { LanguageSelect } from '../LanguageSelect/LanguageSelect';
 
 interface LinkItem {
   link: string;
@@ -46,7 +47,10 @@ export function HeaderMenu() {
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>
-          <ActionToggle />
+          <Group>
+            <ActionToggle />
+            <LanguageSelect></LanguageSelect>
+          </Group>
           <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm"  />
         </div>
       </Container>

@@ -13,9 +13,9 @@ export function ActionToggle() {
 
   useEffect (() => {
     if(computedColorScheme === "light"){
-      setButtonBg(theme.colors.orange[4])
+      setButtonBg(theme.colors.orange[6])
     }else{
-      setButtonBg(theme.colors.orange[5])
+      setButtonBg(theme.colors.orange[6])
     }
   }, [computedColorScheme]);
 
