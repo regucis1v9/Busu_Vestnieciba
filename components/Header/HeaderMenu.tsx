@@ -1,6 +1,6 @@
-"use client"
-import { Group, Container, Text, AppShellHeader, Button, Burger } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+"use client";
+import { Group, Container, Text, AppShellHeader, Button, Burger, Transition, Paper, Stack } from '@mantine/core';
+import { useDisclosure, useViewportSize } from '@mantine/hooks';
 import classes from './HeaderMenu.module.css';
 import { ActionToggle } from '../ThemeToggle/ActionToggle';
 import { LanguageSelect } from '../LanguageSelect/LanguageSelect';
@@ -18,6 +18,7 @@ const links: LinkItem[] = [
 
 export function HeaderMenu() {
   const [opened, { toggle }] = useDisclosure(false);
+  const { height, width } = useViewportSize();
 
   // Function to scroll to the corresponding section
   const handleScroll = (sectionId: string) => {
@@ -47,13 +48,45 @@ export function HeaderMenu() {
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>
-          <Group>
+          <Group visibleFrom="sm">
+            <LanguageSelect />
             <ActionToggle />
-            <LanguageSelect></LanguageSelect>
           </Group>
-          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm"  />
+          <Burger
+            opened={opened}
+            onClick={toggle} // Toggle Drawer open/close
+            size="sm"
+            hiddenFrom="sm"
+            style={{ zIndex: 11 }}
+          />
         </div>
       </Container>
+      <Transition
+        mounted={opened}
+        transition="fade-down"
+        duration={400}
+        timingFunction="ease"
+      >
+        {(transitionStyle) => (
+          <Paper
+            shadow="md"
+            p="xl"
+            h={height}
+            pos="absolute"
+            top={0}
+            left={0}
+            right={0}
+            style={{ ...transitionStyle, zIndex: 10 }}
+          >
+            <Stack h={height} gap={20} align='center'>
+                <Text w={width*0.9} ta="left">Logo</Text>
+                {items}
+                <LanguageSelect />
+                <ActionToggle />
+            </Stack>
+          </Paper>
+        )}
+      </Transition>
     </AppShellHeader>
   );
 }

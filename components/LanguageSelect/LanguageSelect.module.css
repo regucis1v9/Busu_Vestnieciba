@@ -25,3 +25,10 @@
   .section{
     color: var(--mantine-color-orange-5);
   }
+  @media only screen and (max-width: 767px) {
+    .dropdown {
+      background-color: var(--mantine-color-body);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+  }
