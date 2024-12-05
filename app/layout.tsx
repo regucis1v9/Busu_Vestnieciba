@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en" suppressHydrationWarning>
         <head>
-            <ColorSchemeScript forceColorScheme="dark" />
+            <ColorSchemeScript />
             <link rel="shortcut icon" href="/favicon.svg" />
             <meta
                 name="viewport"
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             />
         </head>
         <body className="root">
-        <MantineProvider theme={theme} forceColorScheme="dark">
+        <MantineProvider theme={theme}>
             {children}
         </MantineProvider>
         </body>
