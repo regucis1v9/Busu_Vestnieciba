@@ -1,9 +1,7 @@
-"use client";
-
 import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { theme } from '@/theme';
@@ -15,10 +13,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-    useEffect(() => {
-        // Ensure localStorage is set to dark mode
-        localStorage.setItem('mantine-color-scheme', 'dark');
-    }, []);
 
     return (
         <html lang="en" suppressHydrationWarning>
