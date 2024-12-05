@@ -1,9 +1,20 @@
-"use client";
-import { Group, Container, Text, AppShellHeader, Button, Burger, Transition, Paper, Stack } from '@mantine/core';
+'use client';
+
+import {
+  AppShellHeader,
+  Burger,
+  Button,
+  Container,
+  Group,
+  Paper,
+  Stack,
+  Text,
+  Transition,
+} from '@mantine/core';
 import { useDisclosure, useViewportSize } from '@mantine/hooks';
-import classes from './HeaderMenu.module.css';
-import { ActionToggle } from '../ThemeToggle/ActionToggle';
 import { LanguageSelect } from '../LanguageSelect/LanguageSelect';
+import { ActionToggle } from '../ThemeToggle/ActionToggle';
+import classes from './HeaderMenu.module.css';
 
 interface LinkItem {
   link: string;
@@ -14,6 +25,7 @@ const links: LinkItem[] = [
   { link: '#offerings', label: 'Piedāvājumi' },
   { link: '#about', label: 'Par Mums' },
   { link: '#contact', label: 'Sazināties' },
+    { link: '#pricing', label: 'Cenas' },  
 ];
 
 export function HeaderMenu() {
@@ -23,7 +35,9 @@ export function HeaderMenu() {
   // Function to scroll to the corresponding section and close the mobile sidebar
   const handleScroll = (sectionId: string) => {
     // Close the sidebar immediately
-    toggle();
+    if(opened){
+        toggle();
+    }
 
     // Now perform the scrolling
     const section = document.getElementById(sectionId);
@@ -39,8 +53,8 @@ export function HeaderMenu() {
         handleScroll(link.link.substring(1)); // First function call: scroll to the section
       }}
       className={classes.link}
-      color='orange'
-      variant='subtle'
+      color="orange"
+      variant="subtle"
     >
       {link.label}
     </Button>
@@ -56,7 +70,6 @@ export function HeaderMenu() {
           </Group>
           <Group visibleFrom="sm">
             <LanguageSelect />
-            <ActionToggle />
           </Group>
           <Burger
             opened={opened}
@@ -67,12 +80,7 @@ export function HeaderMenu() {
           />
         </div>
       </Container>
-      <Transition
-        mounted={opened}
-        transition="fade-down"
-        duration={400}
-        timingFunction="ease"
-      >
+      <Transition mounted={opened} transition="fade-down" duration={400} timingFunction="ease">
         {(transitionStyle) => (
           <Paper
             shadow="md"
@@ -84,8 +92,10 @@ export function HeaderMenu() {
             right={0}
             style={{ ...transitionStyle, zIndex: 10 }}
           >
-            <Stack h={height} gap={20} align='center'>
-              <Text w={width * 0.9} ta="left">Logo</Text>
+            <Stack h={height} gap={20} align="center">
+              <Text w={width * 0.9} ta="left">
+                Logo
+              </Text>
               {items}
               <LanguageSelect />
               <ActionToggle />

@@ -8,3 +8,11 @@
     font-size: rem(50px);
   }
 }
+:root[data-mantine-color-scheme="light"] {
+    --mantine-color-body: var(--mantine-color-gray-1) !important;
+}
+
+/* For dark mode */
+:root[data-mantine-color-scheme="dark"] {
+    --mantine-color-body: #282827 !important;
+}

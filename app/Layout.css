@@ -1,0 +1,9 @@
+body {
+    @mixin light {
+        --mantine-color-body: #f9f9f9;
+    }
+
+    @mixin dark {
+        --mantine-color-body: #000000;
+    }
+}

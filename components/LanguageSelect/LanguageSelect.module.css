@@ -1,34 +1,30 @@
 .dropdown {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-    background-color: transparent;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  background-color: black;
+  border: none;
+  color: var(--mantine-color-orange-5);
+}
+
+.input {
+  color: var(--mantine-color-orange-5);
+  transition: none;
+    background-color: black;
+
+  &[data-expanded] {
+    border-color: light-dark(var(--mantine-color-gray-4), var(--mantine-color-dark-4));
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     border: none;
-    color: var(--mantine-color-orange-5);
   }
-  
-  .input {
-    color: var(--mantine-color-orange-5);
-    transition: none;
-  
-    &[data-expanded] {
-      border-color: light-dark(var(--mantine-color-gray-4), var(--mantine-color-dark-4));
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-      background-color: transparent;
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      border: none;
-    }
+}
+.section {
+  color: var(--mantine-color-orange-5);
+}
+@media only screen and (max-width: 767px) {
+  .dropdown {
+    background-color: var(--mantine-color-body);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
-  .section{
-    color: var(--mantine-color-orange-5);
-  }
-  @media only screen and (max-width: 767px) {
-    .dropdown {
-      background-color: var(--mantine-color-body);
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
-    }
-  }
+}

@@ -1,8 +1,9 @@
-"use client";
-import { Carousel } from '@mantine/carousel';
-import { useMediaQuery } from '@mantine/hooks';
-import { Paper, Title, Group, useMantineTheme, rem } from '@mantine/core';
+'use client';
+
 import Autoplay from 'embla-carousel-autoplay';
+import { Carousel } from '@mantine/carousel';
+import { Group, Paper, rem, Title, useMantineTheme } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import classes from './CardsCarousel.module.css';
 
 interface CardProps {
@@ -94,7 +95,7 @@ export function CardsCarousel() {
         slidesToScroll={1}
         plugins={[autoplay]} // Add the autoplay plugin here
         classNames={{ root: classes.slide, indicator: classes.indicator }}
-        hiddenFrom='sm'
+        hiddenFrom="sm"
       >
         {slides}
       </Carousel>
@@ -109,7 +110,8 @@ export function CardsCarousel() {
         slidesToScroll={2}
         plugins={[autoplay]} // Add the autoplay plugin here
         classNames={{ root: classes.slide, indicator: classes.indicator }}
-        visibleFrom='sm'>
+        visibleFrom="sm"
+      >
         {slides}
       </Carousel>
     </Group>

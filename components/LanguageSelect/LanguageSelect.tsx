@@ -1,15 +1,16 @@
-"use client"
-import { useState, useEffect } from 'react';
-import { Select, rem } from '@mantine/core';
-import classes from './LanguageSelect.module.css';
+'use client';
+
+import { useEffect, useState } from 'react';
 import { IconLanguage } from '@tabler/icons-react';
+import { rem, Select } from '@mantine/core';
+import classes from './LanguageSelect.module.css';
 
 export function LanguageSelect() {
   const icon = <IconLanguage style={{ width: rem(16), height: rem(16) }} />;
 
   // Define the language state as a string type
   const [language, setLanguage] = useState<string>('Latviešu');
-  
+
   // This state will track if the component is mounted
   const [mounted, setMounted] = useState(false);
 
@@ -45,7 +46,7 @@ export function LanguageSelect() {
   return (
     <Select
       w={125}
-      variant="subtle"
+      variant="filled"
       placeholder="Izvēlaties valodu"
       leftSection={icon}
       data={['Latviešu', 'English', 'Ruski']}

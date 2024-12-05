@@ -1,5 +1,6 @@
-"use client"
-import { Container, Title, Text, Button } from '@mantine/core';
+'use client';
+
+import { Button, Container, Text, Title } from '@mantine/core';
 import classes from './HeroImageRight.module.css';
 
 export function HeroImageRight() {
@@ -24,20 +25,22 @@ export function HeroImageRight() {
               >
                 Uzticams
               </Text>{' '}
-              un 
+              un
               <Text
                 component="span"
                 inherit
                 variant="gradient"
                 gradient={{ from: 'yellow', to: 'orange' }}
               >
-                {' '}pieejams
+                {' '}
+                godīgs
               </Text>{' '}
               kravas pārvadāšanas uzņēmums
             </Title>
 
             <Text className={classes.description} mt={30}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam odit tempora voluptates et doloremque aperiam reiciendis dicta placeat esse sit?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam odit tempora
+              voluptates et doloremque aperiam reiciendis dicta placeat esse sit?
             </Text>
 
             <Button
