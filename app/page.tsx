@@ -8,7 +8,7 @@ import { theme } from '@/theme';
 export default function HomePage() {
     useEffect(() => {
         // Ensure localStorage is set to dark mode
-        localStorage.setItem('mantine-color-scheme', 'dark');
+        localStorage.setItem('mantine-color-scheme-value', 'dark');
     }, []);
 
     return (
