@@ -23,7 +23,7 @@ export function HeroImageRight() {
                 variant="gradient"
                 gradient={{ from: 'yellow', to: 'orange' }}
               >
-                Uzticams
+                Pagaidu
               </Text>{' '}
               un
               <Text
@@ -33,9 +33,9 @@ export function HeroImageRight() {
                 gradient={{ from: 'yellow', to: 'orange' }}
               >
                 {' '}
-                godīgs
+                izmēģiņājuma
               </Text>{' '}
-              kravas pārvadāšanas uzņēmums
+              lapa
             </Title>
 
             <Text className={classes.description} mt={30}>
